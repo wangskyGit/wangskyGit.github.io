@@ -3,6 +3,8 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+This is personal site of Shiqi Wang. It is generated from [minimal-mistake](https://github.com/mmistakes/minimal-mistakes) and run as github pages site (see [help](https://docs.github.com/en/pages/getting-started-with-github-pages) for more information). Minimal Mistakes is a flexible two-column Jekyll theme which is surprisingly easy-to-use.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+这里是 王世奇 的个人主页。该主页从 minimal-mistake 模板生成，并且直接使用 github pages site 运行网页。你可以通过以下邮箱与我联系：[163邮箱](wangsky_nju@163.com),[Gmail邮箱](wangsky8515@163.com).
+
+特别感谢：[@Michael Rose](https://github.com/mmistakes)
