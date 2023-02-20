@@ -14,6 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Wangsky
+masthead_title: Personal site | Shiqi Wang
+subtitle: Nothing is impossible
+logo: /assets/images/logo.png
 email: wangsky@smail.nju.edu.cn
 description: >- # this means to ignore newlines until "baseurl:"
   Personal site of Shiqi Wang, Nanjing University
@@ -63,27 +66,27 @@ author:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/wangskyGit"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/wangskyGit"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/"
 
 defaults:
   # _posts
@@ -95,6 +98,7 @@ defaults:
       author_profile: true
       read_time: true
       comments: true
+      show_date: true
       share: true
       related: true
   # _pages
@@ -111,3 +115,7 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "wangsky"
