@@ -1,5 +1,6 @@
 ---
 title: "Post: Tutorial"
+comments: false
 excerpt_separator: "<!--more-->"
 categories:
   - Blog
