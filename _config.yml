@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Wangsky
+#locale: zh
 masthead_title: Personal site | Shiqi Wang
 subtitle: Nothing is impossible
 logo: /assets/images/logo.png
@@ -21,7 +22,7 @@ email: wangsky@smail.nju.edu.cn
 description: >- # this means to ignore newlines until "baseurl:"
   Personal site of Shiqi Wang, Nanjing University
 twitter_username: username
-github_username: username
+github_username: wangskyGit
 minimal_mistakes_skin: default
 search: true
 
