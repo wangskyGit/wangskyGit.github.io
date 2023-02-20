@@ -64,9 +64,9 @@ author:
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "I am currently a master student in the School of Artificial Intelligence of Nanjing University. I received my bachelor's degree in Computer Science and Technology from Nanjing University in 2022. "
   links:
-    - label: "Website"
+    - label: "Bio"
       icon: "fas fa-fw fa-link"
-      url: "https://"
+      url: "https://wangskygit.github.io/biography/Self-Bios/"
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   url: "https://twitter.com/"
