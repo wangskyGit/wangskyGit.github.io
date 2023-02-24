@@ -16,7 +16,7 @@
 title: Wangsky
 #locale: zh
 masthead_title: Personal site | Shiqi Wang
-subtitle: Nothing is impossible
+subtitle: It takes all sorts to make a world
 logo: /assets/images/logo.png
 email: wangsky@smail.nju.edu.cn
 description: >- # this means to ignore newlines until "baseurl:"
@@ -63,9 +63,7 @@ author:
   name   : "王世奇(Shiqi Wang)"
   avatar : "/assets/images/bio-photo.jpg"
   bio    :>-
-   我目前南大AI硕士在读，并已于2022年南大计算机系本科毕业；
-   I am currently a master student in the AI school of Nanjing University(NJU) and got my Bachelor's degrees in CS department from NJU in 2022.
-  
+   南大AI硕士在读中~已于2022年南大计算机系本科毕业；I am currently a master student in the AI school of Nanjing University(NJU) and got my Bachelor's degrees in CS department from NJU in 2022.
   links:
     - label: "Biography"
       icon: "fas fa-fw fa-link"
