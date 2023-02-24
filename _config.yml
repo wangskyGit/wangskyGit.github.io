@@ -62,11 +62,17 @@ plugins:
 author:
   name   : "王世奇(Shiqi Wang)"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "I am currently a master student in the School of Artificial Intelligence of Nanjing University. I received my bachelor's degree in Computer Science and Technology from Nanjing University in 2022. "
+  bio    :>-
+   我目前南大AI硕士在读，并已于2022年南大计算机系本科毕业；
+   I am currently a master student in the AI school of Nanjing University(NJU) and got my Bachelor's degrees in CS department from NJU in 2022.
+  
   links:
-    - label: "Bio"
+    - label: "Biography"
       icon: "fas fa-fw fa-link"
       url: "https://wangskygit.github.io/biography/Self-Bios/"
+    # - label: "WeChat"
+    #   icon: "fab fa-fw fa-weixin"
+    #   url: "https://wangskygit.github.io/biography/Self-Bios/"
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   url: "https://twitter.com/"
