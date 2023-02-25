@@ -5,6 +5,7 @@ categories:
 tags:
   - GNN
   - machine learning theory
+toc: true
 ---
 # GNNs Power
 
