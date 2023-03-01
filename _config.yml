@@ -62,7 +62,7 @@ plugins:
 author:
   name   : "王世奇(Shiqi Wang)"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : 南大AI硕士在读中~已于2022年南大计算机系本科毕业；I am currently a master student in the AI school of Nanjing University(NJU) and got my Bachelor's degrees in CS department from NJU in 2022.
+  bio    : 南京大学AI硕士在读中~已于2022年南大计算机系本科毕业；I am currently a master student in the AI school of Nanjing University(NJU) and got my Bachelor's degrees in CS department from NJU in 2022.
   links:
     - label: "Biography"
       icon: "fas fa-fw fa-link"
