@@ -42,7 +42,10 @@ toc: true
 
 - information loss of GCN：
 
-  每增加一层 GCN，hidden embedding以$$\lambda s$$ 的速度靠近（或远离） invariant subspace $$\mathcal{M}$$ , 在 $$\mathcal{M}$$ 中，相同连通区域内且度相同的点具有相同的embedding，无法被区分开来
+  每增加一层 GCN，hidden embedding以 $$\lambda s$$ 的速度靠近（或远离） invariant subspace $$\mathcal{M}$$ , 在 $$\mathcal{M}$$ 中，相同连通区域内且度相同的点具有相同的embedding，无法被区分开来
+
+$$\lambda s$$
+
 
   其中 $\lambda$ 与邻接矩阵的性质有关，S是 GCN的所有权重矩阵 W 奇异值中的最大值；**因此，当  $$\lambda s<1$$ 时，随着网络层数增加，GCN 的 information loss 会不断严重** 
 
