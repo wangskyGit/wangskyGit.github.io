@@ -47,7 +47,7 @@ toc: true
 
 - 当graph 不是特别稀疏（not extremely sparse）且 节点个数足够多时， $\lambda$ 非常小并且随着网络层数增加趋向于0，此时S只有趋向于无穷时才能保障没有information loss；因此在这种情况下，'‘most GCNs suffer from information loss’‘
 
-$$\lambda s$$
+$$ \lambda s $$
 
 :star2: 重要假设：
 
