@@ -1,20 +1,19 @@
 {% if page.mathjax %}
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 {% endif %}
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-      processEscapes: true
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
     },
-    "HTML-CSS": { availableFonts: ["TeX"] }
-  });
-</script> 
+    svg: {
+      fontCache: 'global'
+    }
+  };
+  </script>
+
 {% if site.footer_scripts %}
   {% for script in site.footer_scripts %}
     <script src="{{ script | relative_url }}"></script>
