@@ -71,7 +71,7 @@ if let  $\alpha=1,\tilde{L}=\tilde{L}_{sym}$; i.e. **the graph convolution in GC
 
 ![]({{ site.url }}{{ site.baseurl }}/assets/images/2023-03-04-21-59-47-image.png)
 
-> 乍一看，4.1式和Theorem 1是有差距的，最重要的差距在于AGGEREGATE函数仍然是求和，而求和函数即使在可数空间下，也不会是单射的。但是GIN仍然满足Theorem1的原因在于，最外层的多层MLP是可以模拟复合函数的，换言之，4.1式原本的样子应该是 $\phi((1+\epsilon)f(h_v)+\sum f(h_u))$ ，MLP模拟了复合函数$f\circ g$ 。
+> 乍一看，4.1式和Theorem 1是有差距的，最重要的差距在于AGGEREGATE函数仍然是求和，而求和函数即使在可数空间下，也不会是单射的。但是GIN仍然满足Theorem1的原因在于，最外层的多层MLP是可以模拟复合函数的，换言之，4.1式原本的样子应该是 $\phi((1+\epsilon)f(h_v)+\sum f(h_u))$ ，MLP模拟了复合函数$f\circ \phi$ 。
 > 
 > 4.2 式借鉴了 Jumping Knowledge Networks，是为了增强模型效果，和单射无关
 
