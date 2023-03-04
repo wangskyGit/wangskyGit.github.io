@@ -40,7 +40,9 @@ mathjax: true
 - 在区分不同的图结构方面，Aggregation-based GNN 最多和 WL-test一样优
 - 提出了GIN，在可数空间下，在区分不同图结构方面可以做到和WL-test一样优
 
-GNN 结构假设：![](assets/2023-03-04-21-22-25-image.png)
+本文的定理其实都比较直观，因此笔者可以用相对简洁的语言将其描述清楚，如下：
+
+首先是全文对于GNN 结构的假设：![](assets/2023-03-04-21-22-25-image.png)
 
 :sunny: 重要定理：
 

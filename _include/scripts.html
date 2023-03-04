@@ -1,17 +1,21 @@
+<!-- mathjax -->
 {% if page.mathjax %}
-<script type="text/javascript" id="MathJax-script" async
-src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 {% endif %}
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
     },
-    svg: {
-      fontCache: 'global'
-    }
-  };
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
 </script>
 
 {% if site.footer_scripts %}
@@ -20,6 +24,7 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js?config=TeX-AMS-MML_HT
   {% endfor %}
 {% else %}
   <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
 {% endif %}
 
 {% if site.search == true or page.layout == "search" %}
@@ -34,11 +39,12 @@ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js?config=TeX-AMS-MML_HT
   {%- endcase -%}
 {% endif %}
 
-{% include analytics.html %}
-{% include /comments-providers/scripts.html %}
 
 {% if site.after_footer_scripts %}
   {% for script in site.after_footer_scripts %}
     <script src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% endif %}
+
+{% include analytics.html %}
+{% include /comments-providers/scripts.html %}
