@@ -22,8 +22,8 @@ toc: true
 
 :sunny: **重要定理**（简化版本）
 
-**Lemma 1**:  Define Graph Laplacian of GCN as $\tilde{L}_{sym}=D^{-\frac{1}{2}}LD^{-\frac{1}{2}}$
-<!-- , $L=D-A$, graph convolution in GCN (i.e. $H=D^{-\frac{1}{2}}AD^{-\frac{1}{2}}X$) equals to the Laplacian smoothing as $H=(I-\alpha \tilde{L})X$ (where $\alpha$ controls the weight of self attributes and neighbors') if we let $\alpha=1$, $\tilde{L}=\tilde{L}_{sym}$ ; i.e. **the graph convolution in GCN is a special form of Laplacian smoothing – symmetric Laplacian smoothing.** Note that $A$ above is the adjacency matrix of the graph including self-looping.  -->
+**Lemma 1**:  Define Graph Laplacian of GCN as $\tilde{L}_{sym}=D^{-\frac{1}{2}}LD^{-\frac{1}{2}},L=D-A$
+<!-- , $$, graph convolution in GCN (i.e. $H=D^{-\frac{1}{2}}AD^{-\frac{1}{2}}X$) equals to the Laplacian smoothing as $H=(I-\alpha \tilde{L})X$ (where $\alpha$ controls the weight of self attributes and neighbors') if we let $\alpha=1$, $\tilde{L}=\tilde{L}_{sym}$ ; i.e. **the graph convolution in GCN is a special form of Laplacian smoothing – symmetric Laplacian smoothing.** Note that $A$ above is the adjacency matrix of the graph including self-looping.  -->
 
 > 上述lemma是显而易见的，因此在原文中并不是展示为lemma，而是文字描述，这里为了更加清晰，将其描述为lemma。
 
