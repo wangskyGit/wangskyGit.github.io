@@ -1,15 +1,13 @@
 ---
 title: "图神经网络的表达能力"
 categories:
-
 - Blog
-  tags:
+tags:
 - paper reading
 - GNN
 - machine learning theory
-  toc: true
-  mathjax: true
-
+toc: true
+mathjax: true
 ---
 
 # GNNs Power
@@ -103,7 +101,8 @@ GNN 结构假设：![](assets/2023-03-04-21-22-25-image.png)
 :star2: 重要假设：
 
 - 模型结构：GCN with Relu 
-- sparse graph 可能不受information loss的影响
 - 没有考虑 residual link
 
-这篇文章有一个比较大的令人担忧的点，文章没有讨论sparse graph的情况，而且根据本文的推论，sparse graph是有利于减缓over-smoothing的；同时，作者在实验部分又提到Cora数据集要满足information loss是不够稠密的，因此需要手动增加边。这和实证研究中发现的问题有所矛盾：多篇paper已经表明，对于Cora数据集，over-smoothing问题同样明显。
+这篇文章有一个比较大的令人担忧的点，文章无法解释sparse graph的over-smoothing情况，而且根据本文的推论，sparse graph是有利于减缓over-smoothing的；同时，作者在实验部分又提到Cora数据集要满足information loss是不够稠密的，因此需要手动增加边。这和实证研究中发现的问题有所矛盾：多篇paper已经表明，对于Cora数据集，over-smoothing问题同样明显。
+
+因此本文提出的定理可以很好地解释dense graph的over-smoothing问题，并且给出了information loss的速度，但是对于sparse graph无法很好地解释，令人担心相关定理的证明是否不够 tight。
