@@ -1,5 +1,6 @@
 ---
 title: "图神经网络的表达能力"
+mathjax: true
 categories:
 - Blog
 tags:
@@ -7,7 +8,6 @@ tags:
 - GNN
 - machine learning theory
 toc: true
-mathjax: true
 ---
 
 # GNNs Power
