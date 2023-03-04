@@ -22,14 +22,13 @@ toc: true
 
 :sunny: **重要定理**（简化版本）
 
-**Lemma 1**:  Define Graph Laplacian of GCN as $\tilde{L}_{sym}=D^{-\frac{1}{2}}LD^{-\frac{1}{2}},L=D-A$, graph convolution in GCN (i.e. $H=D^{-\frac{1}{2}}AD^{-\frac{1}{2}}X$) equals to the Laplacian smoothing as $H=(I-\alpha \tilde{L})X$ (where alpha controls the weight of self attributes and neighbors')
-<!-- , $$   if we let $\alpha=1$, $\tilde{L}=\tilde{L}_{sym}$ ; i.e. **the graph convolution in GCN is a special form of Laplacian smoothing – symmetric Laplacian smoothing.** Note that $A$ above is the adjacency matrix of the graph including self-looping.  -->
+**Lemma 1**:  Define Graph Laplacian of GCN as $\tilde{L}_{sym}=D^{-\frac{1}{2}}LD^{-\frac{1}{2}},L=D-A$, graph convolution in GCN (i.e. $H=D^{-\frac{1}{2}}AD^{-\frac{1}{2}}X$) equals to the Laplacian smoothing as $H=(I-\alpha \tilde{L})X$ (where alpha controls the weight of self attributes and neighbors') if we let $\alpha=1, \tilde{L}=\tilde{L}_{sym}$ ; i.e. **the graph convolution in GCN is a special form of Laplacian smoothing – symmetric Laplacian smoothing.** Note that $A$ above is the adjacency matrix of the graph including self-looping. 
 
 > 上述lemma是显而易见的，因此在原文中并不是展示为lemma，而是文字描述，这里为了更加清晰，将其描述为lemma。
 
 **Theorem 1**
 
-<img title="" src="..\assets\images\gnnpower-1.png" alt="image-20230303210418180" style="zoom:75%;" data-align="left" width="460">
+<img title="" src="{{ site.url }}{{ site.baseurl }}/assets/images/gnnpower-1.png" alt="image-20230303210418180" style="zoom:75%;" data-align="left" width="460">
 
 > Lemma 1指明了GCN和拉普拉斯平滑之间的关系，而Theorem 1指明了对同一个矩阵做多次拉普拉斯变换会造成 over-smoothing的问题，原本节点本身的信息会被平滑掉，变换后矩阵保留的信息很有限。但要注意的是上述定理描述的场景和多层GCN还是有区别的，上述**定理中没有引入非线性变换项**，因此按照原文，我们只能说：“ **it raises potential concerns about stacking many convolutional layers in a GCN** ”。
 
@@ -43,7 +42,7 @@ toc: true
 
 本文的定理其实都比较直观，因此笔者可以用相对简洁的语言将其描述清楚，如下：
 
-首先是全文对于GNN 结构的假设：![](assets/2023-03-04-21-22-25-image.png)
+首先是全文对于GNN 结构的假设：![]({{ site.url }}{{ site.baseurl }}/assets/images/2023-03-04-21-22-25-image.png)
 
 :sunny: 重要定理：
 
@@ -66,9 +65,9 @@ toc: true
 
 基于Theorem 1，作者提出了 GIN，GIN保证了在上述假设中是和WL-test一样优的；GIN的模型结构如下，其中READOUT函数取求和函数 sum：
 
-![](assets/2023-03-04-21-59-36-image.png)
+![]({{ site.url }}{{ site.baseurl }}/assets/images/2023-03-04-21-59-36-image.png)
 
-![](assets/2023-03-04-21-59-47-image.png)
+![]({{ site.url }}{{ site.baseurl }}/assets/images/2023-03-04-21-59-47-image.png)
 
 > 乍一看，4.1式和Theorem 1是有差距的，最重要的差距在于AGGEREGATE函数仍然是求和，而求和函数即使在可数空间下，也不会是单射的。但是GIN仍然满足Theorem1的原因在于，最外层的多层MLP是可以模拟复合函数的，换言之，4.1式原本的样子应该是 $\phi((1+\epsilon)f(h_v)+\sum f(h_u))$ ，MLP模拟了复合函数$f\circ g$ 。
 > 
