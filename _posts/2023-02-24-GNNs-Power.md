@@ -22,13 +22,13 @@ toc: true
 
 :sunny: **重要定理**（简化版本）
 
-**Lemma 1**:  Define Graph Laplacian of GCN as $\tilde{L}_{sym}=D^{-\frac{1}{2}}LD^{-\frac{1}{2}},L=D-A$, graph convolution in GCN (i.e. $H=D^{-\frac{1}{2}}AD^{-\frac{1}{2}}X$) equals to the Laplacian smoothing as $H=(I-\alpha \tilde{L})X$ (where alpha controls the weight of self attributes and neighbors') if we let $\alpha=1, \tilde{L}=\tilde{L}_{sym}$ ; i.e. **the graph convolution in GCN is a special form of Laplacian smoothing – symmetric Laplacian smoothing.** Note that $A$ above is the adjacency matrix of the graph including self-looping. 
+**Lemma 1**:  Define Graph Laplacian of GCN as $\tilde{L}_{sym}=D^{-\frac{1}{2}}LD^{-\frac{1}{2}},L=D-A$, graph convolution in GCN (i.e. $H=D^{-\frac{1}{2}}AD^{-\frac{1}{2}}X$) equals to the Laplacian smoothing as $H=(I-\alpha \tilde{L})X$ (where alpha controls the weight of self attributes and neighbors') if we let $\alpha=1,\tilde{L}=\tilde{L}_{sym}$; i.e. **the graph convolution in GCN is a special form of Laplacian smoothing – symmetric Laplacian smoothing.** Note that $A$ above is the adjacency matrix of the graph including self-looping. 
 
 > 上述lemma是显而易见的，因此在原文中并不是展示为lemma，而是文字描述，这里为了更加清晰，将其描述为lemma。
 
 **Theorem 1**
 
-<img title="" src="{{ site.url }}{{ site.baseurl }}/assets/images/gnnpower-1.png" alt="image-20230303210418180" style="zoom:75%;" data-align="left" width="460">
+<img title="" src="{{ site.url }}{{ site.baseurl }}/assets/images/gnnpower-1.png" alt="image-20230303210418180";" data-align="left" width="460">
 
 > Lemma 1指明了GCN和拉普拉斯平滑之间的关系，而Theorem 1指明了对同一个矩阵做多次拉普拉斯变换会造成 over-smoothing的问题，原本节点本身的信息会被平滑掉，变换后矩阵保留的信息很有限。但要注意的是上述定理描述的场景和多层GCN还是有区别的，上述**定理中没有引入非线性变换项**，因此按照原文，我们只能说：“ **it raises potential concerns about stacking many convolutional layers in a GCN** ”。
 
