@@ -110,3 +110,23 @@ if let  $\alpha=1,\tilde{L}=\tilde{L}_{sym}$; i.e. **the graph convolution in GC
 这篇文章有一个比较大的令人担忧的点，文章无法解释sparse graph的over-smoothing情况，而且根据本文的推论，sparse graph是有利于减缓over-smoothing的；同时，作者在实验部分又提到Cora数据集要满足information loss是不够稠密的，因此需要手动增加边。这和实证研究中发现的问题有所矛盾：多篇paper已经表明，对于Cora数据集，over-smoothing问题同样明显。
 
 因此本文提出的定理可以很好地解释dense graph的over-smoothing问题，并且给出了information loss的速度，但是对于sparse graph无法很好地解释，令人担心相关定理的证明是否不够 tight。
+
+### IV. Towards Deeper Graph Neural Networks [KDD 2020]
+
+:bulb: 论文总结
+
+- 实验和理论上解释和证明了over-smoothing
+
+- 提出了DAGNN，将非线性变化（MLP）和propagation 区分开来为两个阶段，实验证明了该模型对over-smoothing的优化效果。
+
+:sunny: 模型细节
+
+![](assets/2023-03-09-18-00-03-image.png)
+
+> 上式所表示的模型DAGNN，和GCN的区别主要体现在：1). 将MLP放在最开始做，之后的propagation过程不再做非线性变换；2).对不同hop的propagation结果进行加权求和（类似attention）。
+> 
+> 这种模型结构的优势在于：1). 由于propagation过程中没有非线性变化，当hop数量增加时，可以减少模型参数，训练更加简单；2). 将对属性的非线性变化和邻居的信息传递分开（但是没有很明确的institution和理论支撑，只是实验效果不错）
+
+:sunny: 重要实验结果：
+
+- 本文的实验结果和 ICLR2020 一致：稀疏图的over-smoothing只有当使用大量GCN层数时才会体现出来
